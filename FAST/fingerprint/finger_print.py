@@ -80,7 +80,7 @@ if __name__ == '__main__':
 		# Generate and output fingerprints per partition_len
 		while endtime - s > datetime.timedelta(seconds = min_fp_length):
 			dt = datetime.timedelta(
-				seconds = params['performance']['partition_len'])
+				seconds = params['performance']['fp_partition_len'])
 			e = min(s + dt, endtime)
 			e_padding = min(s + dt + time_padding, endtime)
 			partition_st = st[i].slice(UTCDateTime(s.strftime('%Y-%m-%dT%H:%M:%S.%f')),
